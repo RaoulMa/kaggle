@@ -1,6 +1,7 @@
 # Kaggle
-Python notebooks for several kaggle competitions. The data sources are not provided, but are given by the kaggle platform. You can also visit my kaggle profile https://www.kaggle.com/raoulma. 
+Python notebooks for several kaggle competitions. The data sources are not provided, but are given by the kaggle platform. You can also visit my kaggle profile https://www.kaggle.com/raoulma, where current versions of my kernels are published. 
 
+- Nuclei segmentation for Data Science Bowl 2018
 - Breast Cancer Image Classification: Image classification of cancerous breasts with 80% validation accuracy
 - Plant Seedlings Classification: Using a pretrained Xception model achieves 90.06% accuracy on the test set 
 - MNIST Classification: Using a CNN achieves 99.51% test set accuracy
