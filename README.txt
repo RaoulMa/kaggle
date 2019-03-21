@@ -2,6 +2,10 @@ About
 -----
 Jupyter notebooks for several kaggle competitions. The data sources are not provided, but can be downloaded from the kaggle platform.  
 
+This repository serves the purpose of self-teaching. The implementations are not particularly clear, efficient, well tested or numerically stable. We advise against using this software for non-didactic purposes.
+
+This software is licensed under the MIT License.
+
 Nuclei Segmentation for the Data Science Bowl 2018
 --------------------------------------------------
 This Jupyter notebook implements a U-Net shaped convolutional neural network in TensorFlow for nuclei segmentation of the images provided by the 2018 Data Science Bowl. The 2018 Data Science Bowl "Find the nuclei in divergent images to advance medical discovery" provides in its first stage a training and test data set consisting of 670 and 65 microscopic images of varying size showing ensembles of cells and their nuclei. For the training images the nuclei are segmented by humans such that we know their number and location within each image. The goal is to find the correct number and location of all nuclei shown in the test images. The performance of an algorithm is evaluated on the mean average precision at different intersection over union (IoU) thresholds, which will be referred to as the score in the following.
