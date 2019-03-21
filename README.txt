@@ -1,0 +1,32 @@
+About
+-----
+Jupyter notebooks for several kaggle competitions. The data sources are not provided, but can be downloaded from the kaggle platform.  
+
+Nuclei Segmentation for the Data Science Bowl 2018
+--------------------------------------------------
+This Jupyter notebook implements a U-Net shaped convolutional neural network in TensorFlow for nuclei segmentation of the images provided by the 2018 Data Science Bowl. The 2018 Data Science Bowl "Find the nuclei in divergent images to advance medical discovery" provides in its first stage a training and test data set consisting of 670 and 65 microscopic images of varying size showing ensembles of cells and their nuclei. For the training images the nuclei are segmented by humans such that we know their number and location within each image. The goal is to find the correct number and location of all nuclei shown in the test images. The performance of an algorithm is evaluated on the mean average precision at different intersection over union (IoU) thresholds, which will be referred to as the score in the following.
+
+Breast Cancer Image Classification
+----------------------------------
+Image classification of cancerous breasts with 80% validation accuracy. This script won a kaggle kernel prize. The dataset consists of 5547 breast histology images each of pixel size 50 x 50 x 3. The goal is to classify cancerous images (IDC : invasive ductal carcinoma) vs non-IDC images. In a first step we analyze the images and look at the distribution of the pixel intensities. Then, the images are normalized and we try out some basic classification algorithms like logistic regregession, random forest, decision tree and so on. We validate and compare each of these base models.  
+
+Plant Seedlings Classification
+------------------------------
+Given are 4750 labeled images (1.73GB) showing plants of 12 different types, the goal is to classify correctly the species shown on the 794 images (91MB) of the test set. All images are quadratic but vary in size. We resize them such that each image has the shape (299,299,3). Next, we detect and segment the plant parts of the images, then normalize them such that each pixel is defined on the range [-1,1]. An optional step is to generate new images through rotations, translations and axis flippings, augmenting the original data. All images are then fed into a pretrained Xception model provided by keras and we extract 2048 bottleneck features for each image. Having computed these features once, we train and validate a basic logistic regression, random forest and fully connected neural network model. Finally, we predict the species classes of the test images and write the submission file. Using a pretrained Xception model achieves 90.06% accuracy on the test set.
+
+MNIST Classification
+--------------------
+We implement a deep neural network consisting of convolutional and fully connected layers to classify handwritten digits of the MNIST dataset. The labeled dataset consists of 42000 images of size 28x28 = 784 pixels (one gray-scale number) including the corresponding labels from 0,..,9. The test set consists of 28000 images. Each image is normalized such that each pixel takes on values in the range [0,1]. First, we try out basic models like logistic regression, random forest and so on. We achieve a 99.51% test set accuracy. 
+
+House Price Prediction
+----------------------
+Given are a training and test data set where each entry contains 80 features that are related to house properties. For the training set which has 4160 entries we know the actual sale prices for each house. The goal is to predict the unknown sale prices for the 4159 entries of the test set. This is a supervised regression problem. After analyzing the data we correct, convert, delete and create new features. We check the correlation of the features and their importance on the sale price. After the feature selection we model the data and try single and ensembles of models. Finally we predict and submit the test results. The precision of each model is evaluated by the root-mean-squared error (rmse) of the logarithm of the sale prices. Regression of sale price of houses achieves 0.11710 root-mean squared error.
+
+Titanic Survival Classification
+-------------------------------
+Given are a training and test data set where each entry contains 80 features that are related to house properties. For the training set which has 4160 entries we know the actual sale prices for each house. The goal is to predict the unknown sale prices for the 4159 entries of the test set. This is a supervised regression problem. After analyzing the data we correct, convert, delete and create new features. We check the correlation of the features and their importance on the sale price. After the feature selection we model the data and try single and ensembles of models. Finally we predict and submit the test results. The precision of each model is evaluated by the root-mean-squared error (rmse) of the logarithm of the sale prices.
+
+Stock Price Prediction
+----------------------
+This notebook demonstrates the future price prediction for different stocks using recurrent neural networks in tensorflow. Recurrent neural networks with basic, LSTM or GRU cells are implemented.
+
